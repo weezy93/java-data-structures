@@ -3,17 +3,17 @@ import java.util.ArrayList; // have to import
 public class ArrayLists {
 
   public static void main(String[] args) {
-    ArrayList<String> students = new ArrayList<>();
+    Student louisa = new Student(1, "Louisa", "Reese");
+    String louisaFullName = louisa.getFullName();
 
-    students.add("Karan Withrow");
-    students.add("Tonya Fitting");
-    students.add("April Fronk");
-    students.add("Marylouise Haake");
-    students.add("Temika Berthiaume");
+    ArrayList<Student> students = new ArrayList<>();
 
-    System.out.println("---After Initial Add---");
-    for(String student : students) {
-      System.out.println(student);
+    students.add(louisa);
+
+    students.add(new Student(2, "Mike", "Dee"));
+
+    for (Student student : students) {
+      System.out.println(student.getId() + " " + student.getFullName());
     }
 
   }
